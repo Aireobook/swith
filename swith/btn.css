@@ -1,0 +1,36 @@
+
+.corps {
+    display:inline-block;
+    position:relative;
+    width:35px;
+    height:20px;
+    background-color:#a8b2b9;
+    border-radius:10px;
+}
+.corps:hover{
+    cursor:pointer;
+}
+
+.connected{
+    background-color: #3877de;
+}
+
+.connected>div{
+    border-color:#003696;
+    left:15px;
+}
+
+.hollowse{
+    display:inline-block;
+    width:20px;
+    height:18px;
+    position:absolute;
+    left:0px;
+    border-width:1px;
+    border-style:solid;
+    border-color:#a8b2b9;
+    border-radius:10px;
+    background-color:#fff;
+    transition:left 0.2s;
+}
+

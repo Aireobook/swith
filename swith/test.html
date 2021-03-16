@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="c1" style="width: 200px; height: 120px; border: 1px solid teal">
+
+</div>
+
+<div id="c2" style="width: 200px; height: 120px; border: 1px solid teal">
+
+</div>
+
+<div id="c3" style="width: 200px; height: 120px; border: 1px solid teal">
+
+</div>
+
+
+
+<script>
+
+    window.stor = JSON.parse(window.localStorage.getItem('switch'));
+
+    let c1 = document.getElementById('c1');
+    let c2 = document.querySelector('#c2');
+    let c3 = document.querySelector('#c3')
+
+    if (stor.color1 === 1){
+        c1.style.background = "yellow";
+    }else{
+        c1.style.background = "none";
+    }
+
+
+    if (stor.color2 === 1){
+        c2.style.background = "yellow";
+    }else{
+        c2.style.background = "none";
+    }
+
+
+    if (stor.color3 === 1){
+        c3.style.background = "yellow";
+    }else{
+        c3.style.background = "none";
+    }
+
+
+    window.addEventListener('storage', () => {
+
+        window.stor = JSON.parse(window.localStorage.getItem('switch'));
+        // console.log(stor);
+        console.log('----------------')
+
+        console.log('color1--------', window.stor.color1 )
+        console.log('color2--------', stor.color2 )
+        console.log('color3--------', stor.color3 )
+
+
+
+        if (stor.color1 === 1){
+            c1.style.background = "yellow";
+        }else{
+            c1.style.background = "none";
+        }
+
+
+        if (stor.color2 === 1){
+            c2.style.background = "yellow";
+        }else{
+            c2.style.background = "none";
+        }
+
+
+        if (stor.color3 === 1){
+            c3.style.background = "yellow";
+        }else{
+            c3.style.background = "none";
+        }
+
+
+    });
+
+</script>
+
+</body>
+</html>
